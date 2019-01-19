@@ -1,0 +1,9 @@
+certifi==2018.11.29
+cffi==1.11.5
+Django==3.0.dev20190117233444
+django-bootstrap3==11.0.0
+django-braces==1.13.0
+misaka==2.1.1
+pycparser==2.19
+pytz==2018.9
+sqlparse==0.2.4

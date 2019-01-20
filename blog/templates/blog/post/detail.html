@@ -20,6 +20,7 @@
 			{{total_comments}} comment{{total_comments|pluralize}}
 		</h2>
 	{% endwith %}
+
 	<!-- TAGS -->
 	<h2>Similar posts</h2>
 	{% for post in similar_posts %}
@@ -29,6 +30,7 @@
 	{% empty %}
 		<p>There are no similar posts yet</p>
 	{% endfor %}
+	
 	<!-- COMMENTS -->
 	{% for comment in comments %}
 		<div class="comment">

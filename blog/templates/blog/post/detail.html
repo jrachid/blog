@@ -1,4 +1,6 @@
 {% extends "blog/base.html" %}
+
+{% load blog_tags %}
 {% block title %}{{post.title}}{% endblock %}
 
 {% block content %}
@@ -7,7 +9,7 @@
 		Published on {{post.publish}} by {{post.author}} (last update {{post.updated}})
 	</p>
 	<p>
-		{{post.body|linebreaks}}
+		{{post.body|markdown}}
 	</p>
 	<p>
 		<a href="{% url 'blog:post_share' post.id %}">
@@ -30,7 +32,7 @@
 	{% empty %}
 		<p>There are no similar posts yet</p>
 	{% endfor %}
-	
+
 	<!-- COMMENTS -->
 	{% for comment in comments %}
 		<div class="comment">

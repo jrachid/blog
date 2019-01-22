@@ -19,7 +19,7 @@
 	{% else %}
 		<h1>Search for posts</h1>
 		<form action="." method="get">
-			{{csrf_token}}
+			{% csrf_token %}
 			{{form.as_p}}
 			<input type="submit" name="" value="Search">
 		</form>
